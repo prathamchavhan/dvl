@@ -82,7 +82,7 @@ export default function Header() {
       {/* ✅ Button outside nav-wrapper */}
       <button
         className="head-but"
-        onClick={() => navigate("/contact")}
+        onClick={() => navigate("http://localhost:5172/")}
       >
      DV
       </button>
