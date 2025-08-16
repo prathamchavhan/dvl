@@ -1,0 +1,238 @@
+/* Header Container Styles */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 22px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+    justify-content: flex-start; 
+   gap: 150px; 
+}
+
+/* Logo Styles */
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 60px;
+  margin-right: 9px;
+}
+
+/* Navigation Wrapper Styles with Cyan Border */
+.nav-wrapper {
+  display: flex;
+  gap: 50px;
+  padding: 6px 14px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  background: 
+  linear-gradient(rgb(255, 249, 249), rgb(255, 248, 248)) padding-box,
+    linear-gradient(90deg, #0D0968 0%, #F7751E 100%) border-box;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  margin-left: -15px; 
+}
+
+/* Navigation Button Styles */
+.nav-button {
+  color: #000000;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 19px;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+/* Active State Styles */
+.nav-button.active {
+  
+  color: #000000;
+}
+.nav-button {
+  position: relative;
+  color: inherit; /* keep your current text color */
+  text-decoration: none; /* remove default underline */
+  
+}
+
+.nav-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+bottom: 0px; 
+  height: 3px;             /* thickness of underline */
+  width: 0;                /* start with no underline */
+  background-color: #ff7728; /* underline color */
+  transition: width 0.3s ease;
+}
+
+.nav-button:hover::after {
+  width: 100%;             /* full width underline on hover */
+}
+
+/* Hamburger icon styles */
+.mobile-menu-toggle {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  z-index: 1100;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-menu-toggle span,
+.mobile-menu-toggle span::before,
+.mobile-menu-toggle span::after {
+  display: block;
+  background-color: #0D0968; /* deep blue color for icon */
+  height: 3px;
+  border-radius: 2px;
+  position: absolute;
+  width: 100%;
+  transition: all 0.35s ease;
+}
+
+.mobile-menu-toggle span {
+  top: 50%;
+  margin-top: -1.5px;
+}
+
+.mobile-menu-toggle span::before {
+  content: "";
+  top: -10px;
+}
+
+.mobile-menu-toggle span::after {
+  content: "";
+  top: 10px;
+}
+
+/* Animate hamburger to X when open */
+.mobile-menu-toggle.active span {
+  background-color: transparent;
+}
+.mobile-menu-toggle.active span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.mobile-menu-toggle.active span::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+/* Existing mobile styles for up to 768px */
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .nav-wrapper {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: saturate(180%) blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    box-shadow: 0 12px 24px rgba(15, 15, 15, 0.2);
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 20px 24px;
+    gap: 14px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    z-index: 1050;
+  }
+
+  .nav-wrapper.mobile-open {
+    display: flex;
+    max-height: 600px;
+    padding: 20px 24px;
+  }
+
+  .nav-button {
+    font-size: 17px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    color: #0D0968;
+    background-color: transparent;
+    text-align: center;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  .nav-button:hover {
+    background-color: #f7751e;
+    color: white;
+  }
+
+  .nav-button.active {
+    background-color: #f7751e;
+    color: white;
+  }
+
+  .nav-button::after {
+    display: none;
+  }
+}
+
+/* For small phones (up to 360px) */
+@media (max-width: 360px) {
+  .nav-wrapper {
+    top: 60px; /* less top space */
+    left: 6px;
+    right: 6px;
+    padding: 16px 18px;
+    gap: 10px;
+  }
+
+  .nav-button {
+    font-size: 14px;
+    padding: 10px 12px;
+    border-radius: 10px;
+  }
+}
+
+/* For very small phones (up to 320px) */
+@media (max-width: 320px) {
+  .nav-wrapper {
+    top: 55px;
+    left: 4px;
+    right: 4px;
+    padding: 12px 14px;
+    gap: 8px;
+  }
+
+  .nav-button {
+    font-size: 13px;
+    padding: 8px 10px;
+    border-radius: 8px;
+  }
+}
+.head-but{
+
+
+background: linear-gradient(90deg, #0D0968 0%, #F7751E 100%);
+
+
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.head-but:hover {
+ background: linear-gradient(90deg, #0D0968 0%, #F7751E 100%);
+}

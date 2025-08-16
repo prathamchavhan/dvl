@@ -1,0 +1,219 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.video-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+}
+
+/* Blue polygon image in top-right */
+.polygon-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: auto;
+  z-index: -1;
+}
+
+/* White box with text */
+.content-box {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  background: white;
+  padding: 20px 30px;
+  max-width: 490px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  border-left: 10px solid #00a3ff;
+  border-right: 5px solid #003b91;
+  z-index: 1;
+}
+
+.content-box h2 {
+  color: #ff7a00;
+  margin-bottom: 10px;
+}
+
+.content-box p {
+  font-size: 14px;
+  color: #000;
+  line-height: 1.5;
+}
+
+/* Man with laptop */
+.person-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 600px;
+  z-index: 2;
+}
+/* For tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .hero-container {
+    height: 70vh;
+  }
+
+  .content-box {
+    top: 15%;
+    left: 10%;
+    max-width: 90%;
+    padding: 15px 20px;
+    border-left-width: 8px;
+    border-right-width: 3px;
+  }
+
+  .content-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .content-box p {
+    font-size: 1rem;
+  }
+
+  .person-img {
+    height: 400px;
+  }
+
+  .polygon-img {
+    width: 60%;
+  }
+}
+
+/* For portrait tablets and large phones */
+@media (max-width: 768px) {
+  .hero-container {
+    height: 60vh;
+  }
+
+  .content-box {
+    top: 12%;
+    left: 5%;
+    max-width: 90%;
+    padding: 12px 16px;
+    border-left-width: 6px;
+    border-right-width: 2px;
+  }
+
+  .content-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .content-box p {
+    font-size: 0.9rem;
+  }
+
+  .person-img {
+    position: static;
+    height: 300px;
+    margin: 20px auto 0 auto;
+    display: block;
+    left: auto;
+  }
+
+  .polygon-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+  }
+}/* Overlay text on photo for mobile */
+@media (max-width: 480px) {
+  .hero-container {
+    position: relative;
+    height: auto;
+    padding-bottom: 0;
+    background-color: #f9f9f9; /* subtle off-white background */
+  }
+
+  .person-img {
+    position: relative;
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 16px;
+    filter: brightness(0.85); /* slightly darken photo for better text contrast */
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    transition: filter 0.3s ease;
+  }
+
+  .content-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.85);
+    padding: 24px 30px;
+    max-width: 90%;
+    border-radius: 20px;
+    box-shadow:
+      0 10px 20px rgba(0, 0, 0, 0.15),
+      inset 0 0 10px rgba(255, 255, 255, 0.8);
+    text-align: center;
+    border-left: 8px solid #00a3ff;
+    border-right: 4px solid #003b91;
+    z-index: 2;
+    backdrop-filter: saturate(180%) blur(8px);
+    -webkit-backdrop-filter: saturate(180%) blur(8px);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .content-box:hover {
+    box-shadow:
+      0 12px 28px rgba(0, 0, 0, 0.25),
+      inset 0 0 12px rgba(255, 255, 255, 0.9);
+  }
+
+  .content-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    color: #ff7a00;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+  }
+
+  .content-box p {
+    font-size: 1.1rem;
+    color: #222;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  /* Hide polygon image on small screens */
+  .polygon-img {
+    display: none;
+  }
+}
+@media (max-width: 360px) {
+  .content-box {
+    padding: 18px 22px;
+    max-width: 95%;
+    border-radius: 16px;
+  }
+
+  .content-box h2 {
+    font-size: 1.4rem;
+  }
+
+  .content-box p {
+    font-size: 1rem;
+  }
+
+  .person-img {
+    max-height: 220px;
+    filter: brightness(0.9);
+  }
+}
