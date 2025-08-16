@@ -124,8 +124,8 @@ body {
 .course-subtitle {
   width: 250px;
   height: 8px;
-  background: #b4b8bc;
-  color: #363434;
+  background: #f8fbfe;
+  color: #363434; 
   padding: 10px;
   margin: 6px 0 12px 0;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
@@ -417,7 +417,7 @@ body {
   width: 80px;
   height: 45px;
   border-radius: 10px;
-  border: 1px solid #bcbcbc;
+  border: 1px solid #fffcfc;
   object-fit: var(--container-height);
   background: #f7f7fa;
   display: block;
@@ -520,8 +520,8 @@ body {
 }
 
 .cert-rating-img {
-  width: 110px;
-  height: 40px;
+  width: 280px;
+  height: 290px;
   object-fit: var(--accent-height);
 }
 
@@ -530,7 +530,7 @@ body {
   font-weight: 600;
   color: #232323;
   font-family: inherit;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.00em;
 }
 
 @media (max-width: 1200px) {

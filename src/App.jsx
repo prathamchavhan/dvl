@@ -15,6 +15,7 @@ import Policies from './pages/Policies';
 import Timepass from "./pages/services/Timepass";
 
 import Carrercoun from "./pages/carrercounselling/Carrercoun";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,10 +29,8 @@ const router = createBrowserRouter([
 
      
               {path : "services/Timepass",element:<Timepass/>},
-            { path: "carrercounselling/Carrercoun", element: <Carrercoun /> },
-           
-
-                
+            { path: "carrercounselling/councontact", element: <Carrercoun /> },
+       
     ]
   },
 ]);

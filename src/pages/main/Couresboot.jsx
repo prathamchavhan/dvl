@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './SectionAndCertificate.css';
+import { useNavigate } from "react-router-dom";
+
 import { TbCertificate } from "react-icons/tb";
 import { MdCalendarMonth } from "react-icons/md";
 const SectionAndCertificate = () => {
   const [currentCertificateIndex, setCurrentCertificateIndex] = useState(0);
   const [arrowLeft, setArrowLeft] = useState(0);
+const navigate = useNavigate();
 
   const courses = [
     {
@@ -24,7 +27,7 @@ const SectionAndCertificate = () => {
       image: "images/course/PPC.png",
       duration: "2 Months",
 
-      syllabus: "syllabus-2.pdf",
+      syllabus: "power platform.pdf",
       accentColor: "course-accent2"
     },
     {
@@ -44,7 +47,13 @@ const SectionAndCertificate = () => {
       id: "cert-1", 
       title: "100 % Placement Unlocked", 
       desc: "Master top Microsoft tools – SQL, Power BI, Power Automate & Power Apps. Build real projects, gain internship experience, and learn from industry experts. Land your dream job with 100% placement support and unlimited interview calls.", 
-      logos: ["Excel.png", "Pow_BI.png", "SQL_small.png", "pow.jpg"], 
+      logos: [
+  "images/subcou/excel.png",  // ✅ relative path from public folder
+ "images/subcou/power.png",
+  "images/subcou/pbi.png",
+  "images/subcou/sql.png"
+]
+,
       certImage: "images/certificate/PBC.png",
       hasBestSeller: true,
       titleClass: "cert-title1",
@@ -57,7 +66,7 @@ const SectionAndCertificate = () => {
       id: "cert-2", 
       title: "Power Platform Unlocked", 
       desc: "Transform business challenges into powerful solutions using Power BI, Power Apps, and Power Automate.Gain practical skills through guided projects, workflow automation, and low-code app development .", 
-      logos: ["Pow_BI.png", "PA.jpg", "pow.jpg"], 
+      logos: ["images/subcou/pbi.png", "images/subcou/power.png", "images/subcou/pa.png"], 
       certImage: "images/certificate/PPC.png",
       hasBestSeller: false,
       titleClass: "cert-title",
@@ -70,7 +79,7 @@ const SectionAndCertificate = () => {
       id: "cert-3", 
       title: " SQL Unlocked", 
       desc: "On the successful completion of this online IT  Professional Training Program you will be proficient in  working with SQL and to be job-ready for some  of the top paying companies in the world .", 
-      logos: ["Google_Sheet.png", "SQL_small.png"], 
+      logos: [ "images/subcou/sql.png",   "images/subcou/googlesheet.png"], 
       certImage: "images/certificate/SSQL.png",
       hasBestSeller: false,
       titleClass: "cert-title",
@@ -206,17 +215,20 @@ const SectionAndCertificate = () => {
                   <img key={i} src={logo} className="cert-logo-img" alt={`Logo ${i}`} />
                 ))}
               </div>
-
-              <div className={cert.buttonStackClass}>
-                <div className="cert-bar-row">
-                  <button className="cert-enroll-btn">ENROLL</button>
+              <div>
+                <div>
+<button 
+  className="cert-enroll-btn"
+  onClick={() => navigate("/carrercounselling/Councontact")}
+>  ENROLL
+</button>
                   <img src="discount.png" alt="Price" className="cert-price-img" />
                 </div>
               </div>
-              <div className={cert.ratingStackClass}>
-                <img src="star.png" alt="5 star rating" className="cert-rating-img" />
-                <span className="cert-rating-number">(5,872 ratings)</span>
-              </div>
+          <div className="cert-rating-stack">
+  <img src="images/course/rating.png" alt="5 star rating" className="cert-rating-img" />
+  <span className="cert-rating-number">(5,872 ratings)</span>
+</div>
             </div>
             <div className="cert-right-stack">
               <img src={cert.certImage} alt="Certificate Preview" className="cert-img-big" />

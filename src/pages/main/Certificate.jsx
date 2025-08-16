@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './Certificate1.css';
 import { TbCertificate } from "react-icons/tb";
+import { useNavigate } from "react-router-dom";
 import { MdCalendarMonth } from "react-icons/md";
 const SectionAndCertificate = () => {
   const [currentCertificateIndex, setCurrentCertificateIndex] = useState(0);
   const [arrowLeft, setArrowLeft] = useState(0);
+const navigate = useNavigate();
+const formatINR = (num) => num.toLocaleString("en-IN");
 
   const courses = [
     {
@@ -13,7 +16,7 @@ const SectionAndCertificate = () => {
       subtitle: "Unlock Insights with Data Analytics",
       image: "images/course/DA.png",
       duration: "6 Months",
-   
+      discountImage: "images/discount/discount1.png",
       syllabus: "syllabus-1.pdf",
       accentColor: "course-acc1"
     },
@@ -23,8 +26,8 @@ const SectionAndCertificate = () => {
       subtitle: "Visualize Success with Power BI",
       image: "images/course/PB.png",
       duration: "2 Months",
-      
-      syllabus: "syllabus-2.pdf",
+          discountImage: "images/discount/discount2.png",
+      syllabus: "power platform.pdf",
       accentColor: "course-acc2"
     },
     {
@@ -33,7 +36,7 @@ const SectionAndCertificate = () => {
       subtitle: "Turn Raw Data into Real Insight",
       image: "images/course/PBSC.png",
       duration: "4 Months",
-   
+    discountImage: "images/discount/discount3.png",
       syllabus: "syllabus-3.pdf",
       accentColor: "course-acc3"
     }
@@ -44,40 +47,52 @@ const SectionAndCertificate = () => {
       id: "cert-1", 
       title: "Data Analytics Unlocked", 
       desc: "On the successful completion of this online IT Professional Training Program you will be proficient in working with Power BI and to be job-ready for some of the top paying companies in the world.", 
-      logos: ["Excel.png", "Pow_BI.png", "SQL_small.png", "pow.jpg"], 
+       logos: [
+  "images/subcou/excel.png",  // ✅ relative path from public folder
+  "images/subcou/googlesheet.png",
+  "images/subcou/pbi.png",
+  "images/subcou/power.png",
+  "images/subcou/sql.png"
+], 
       certImage: "images/certificate/PBC.png",
+      
       hasBestSeller: true,
       titleClass: "cert-title1",
       descClass: "cert-desc1",
       logosStackClass: "cert-logos-stack1",
       buttonStackClass: "cert-logos-stack21",
       ratingStackClass: "cert-logos-stack31"
+
     },
     { 
       id: "cert-2", 
       title: "Power BI Unlocked", 
       desc: "On the successful completion of this online IT Professional Training Program you will be proficient in working with Power BI and to be job-ready for some of the top paying companies in the world.", 
-      logos: ["Pow_BI.png", "PA.jpg", "pow.jpg"], 
+      logos: ["images/subcou/pbi.png", "images/subcou/googlesheet.png"], 
       certImage: "images/certificate/dataanalyst.png",
       hasBestSeller: false,
       titleClass: "cert-title",
       descClass: "cert-desc",
       logosStackClass: "cert-logos-stack",
       buttonStackClass: "cert-logos-stack2",
-      ratingStackClass: "cert-logos-stack3"
+      ratingStackClass: "cert-logos-stack3",
+
+
     },
     { 
       id: "cert-3", 
       title: "Power BI & SQL Unlocked", 
       desc: "On the successful completion of this online IT Professional Training Program you will be proficient in working with Power BI and SQL to be job-ready for some of the top paying companies in the world", 
-      logos: ["Google_Sheet.png", "SQL_small.png"], 
+      logos: ["images/subcou/pbi.png", "images/subcou/googlesheet.png","images/subcou/sql.png"], 
       certImage: "images/certificate/PBS.png",
       hasBestSeller: false,
       titleClass: "cert-title",
       descClass: "cert-desc",
       logosStackClass: "cert-logos-stack",
       buttonStackClass: "cert-logos-stack2",
-      ratingStackClass: "cert-logos-stack3"
+      ratingStackClass: "cert-logos-stack3",
+
+       
     }
   ];
 
@@ -130,7 +145,7 @@ const SectionAndCertificate = () => {
             >
               <img src={course.image} alt="Course Main" className="course-img" />
               <div className="course-title">{course.title}</div>
-              <div className="course-subtitle">
+              <div className="course-sub">
                 <span className="course-subtitle-text">{course.subtitle}</span>
               </div>
               <div className="course-info">
@@ -207,22 +222,23 @@ const SectionAndCertificate = () => {
                 ))}
               </div>
 
-              <div className={cert.buttonStackClass}>
-                <div className="cert-bar-row">
-                    <button 
-        className="cert-enroll-btn" 
-       onClick={() => navigate("/carrercounselling/councontact")}
+              <div>
+                <div>
+<button 
+  className="cert-enroll-btn"
+  onClick={() => navigate("/carrercounselling/Councontact")}
+>  ENROLL
+</button>
+                  <img src={cert.discountImage} alt="Price" className="cert-price-img" />
 
-      >
-        ENROLL
-      </button>
-                  <img src="discount.png" alt="Price" className="cert-price-img" />
                 </div>
               </div>
-              <div className={cert.ratingStackClass}>
-                <img src="images/course/rating.png" alt="5 star rating" className="cert-rating-img" />
-                <span className="cert-rating-number">(5,872 ratings)</span>
-              </div>
+             <div className="cert-rating-stack">
+  <img src="images/course/rating.png" alt="5 star rating" className="cert-rating-img" />
+  <span className="cert-rating-number">(5,872 ratings)</span>
+</div>
+
+
             </div>
             <div className="cert-right-stack">
               <img src={cert.certImage} alt="Certificate Preview" className="cert-img-big" />
