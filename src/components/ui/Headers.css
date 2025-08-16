@@ -236,3 +236,14 @@ background: linear-gradient(90deg, #0D0968 0%, #F7751E 100%);
 .head-but:hover {
  background: linear-gradient(90deg, #0D0968 0%, #F7751E 100%);
 }
+.head-but a {
+  color: inherit;        /* same color as parent text */
+  text-decoration: none; /* remove underline */
+  cursor: pointer;
+}
+
+.head-but a:hover {
+  color: inherit;        /* no color change on hover */
+  text-decoration: none; /* keep it clean */
+}
+

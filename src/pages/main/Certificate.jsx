@@ -209,7 +209,13 @@ const SectionAndCertificate = () => {
 
               <div className={cert.buttonStackClass}>
                 <div className="cert-bar-row">
-                  <button className="cert-enroll-btn">ENROLL</button>
+                    <button 
+        className="cert-enroll-btn" 
+       onClick={() => navigate("/carrercounselling/councontact")}
+
+      >
+        ENROLL
+      </button>
                   <img src="discount.png" alt="Price" className="cert-price-img" />
                 </div>
               </div>

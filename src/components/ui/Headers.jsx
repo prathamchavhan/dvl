@@ -80,12 +80,12 @@ export default function Header() {
       </div>
 
       {/* ✅ Button outside nav-wrapper */}
-      <button
-        className="head-but"
-        onClick={() => navigate("http://localhost:5172/")}
-      >
-     DV
-      </button>
+
+      <div className="head-but">
+ <a href="http://localhost:5172" target="_blank" rel="noopener noreferrer">
+   DV
+  </a>   </div>
+
     </header>
   );
 }
