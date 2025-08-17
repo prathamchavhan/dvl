@@ -501,7 +501,6 @@ body {
   background: #f7751e;
   color: #fff;
 }
-
 .cert-price-img {
   width: 180px;
   height: 100px;
@@ -520,8 +519,8 @@ body {
 }
 
 .cert-rating-img {
-  width: 280px;
-  height: 290px;
+  width: 160px;
+  height: 190px;
   object-fit: var(--accent-height);
 }
 
@@ -530,8 +529,10 @@ body {
   font-weight: 600;
   color: #232323;
   font-family: inherit;
-  letter-spacing: 0.00em;
+  letter-spacing: 0.01em;
 }
+
+
 
 @media (max-width: 1200px) {
   .course-row {
