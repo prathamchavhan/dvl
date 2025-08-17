@@ -27,8 +27,10 @@ const router = createBrowserRouter([
     
       { path: "policies", element: <Policies /> },
 
-     
+    
               {path : "services/Timepass",element:<Timepass/>},
+{ path: "carrercounselling/carrercoun", element: <Carrercoun /> },
+
             { path: "carrercounselling/councontact", element: <Carrercoun /> },
        
     ]
