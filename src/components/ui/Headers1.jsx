@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import "./Headers.css";
+import "./Headers1.css";
 
 export default function Header() {
   const navigate = useNavigate();

@@ -2,19 +2,18 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 
-import { Home } from "./pages/main/Home";
+import { Home } from "./pages/Main/Home";
 import { Applayout } from "./components/layout/Applayout";
-import About from './pages/About';
 
 // or wherever it lives in your project
 
-import { ErrorPage } from "./pages/ErrorPage";
+import { ErrorPage } from "./pages/ErrorPage1";
 import Policies from './pages/Policies';
 
 
-import Timepass from "./pages/services/Timepass";
+import Timepass from "./pages/Services1/Timepass";
 
-import Carrercoun from "./pages/carrercounselling/Carrercoun";
+import Carrercoun from "./pages/Carrercounselling/Carrercoun";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +22,6 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "about", element: <About /> },
     
       { path: "policies", element: <Policies /> },
 

@@ -1,6 +1,6 @@
-import Headers from "../ui/Headers";  
+import Headers from "../ui/Headers1";  
 
-import Footers  from "../ui/Footers"; 
+import Footers  from "../ui/Footers1"; 
 
 import {Outlet} from "react-router-dom";
 
