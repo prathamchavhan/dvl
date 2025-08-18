@@ -2,7 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 
-import Home  from "./pages/Main/Home";
+import Home  from "./pages/main/Home";
 import { Applayout } from "./components/layout/Applayout";
 
 // or wherever it lives in your project
@@ -13,7 +13,7 @@ import Policies from './pages/Policies';
 
 import Timepass from "./pages/Services1/Timepass";
 
-import Carrercoun from "./pages/Carrercounselling/Carrercoun";
+import Carrercoun from "./pages/carrercounselling/Carrercoun";
 
 const router = createBrowserRouter([
   {
