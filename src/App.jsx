@@ -2,7 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 
-import { Home } from "./pages/Main/Home";
+import Home  from "./pages/Main/Home";
 import { Applayout } from "./components/layout/Applayout";
 
 // or wherever it lives in your project

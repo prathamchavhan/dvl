@@ -12,7 +12,7 @@ const images = [
    "/images/sagar.png"
 ];
 
-export function Home() {
+const Home = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -70,3 +70,4 @@ export function Home() {
         </>
   );
 }
+export default Home;
