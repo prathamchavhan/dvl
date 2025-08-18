@@ -17,7 +17,7 @@ const formatINR = (num) => num.toLocaleString("en-IN");
       image: "images/course/DA.png",
       duration: "6 Months",
       discountImage: "images/discount/discount1.png",
-      syllabus: "syllabus-1.pdf",
+      syllabus: "b1.pdf",
       accentColor: "course-acc1"
     },
     {
@@ -27,7 +27,7 @@ const formatINR = (num) => num.toLocaleString("en-IN");
       image: "images/course/PB.png",
       duration: "2 Months",
           discountImage: "images/discount/discount2.png",
-      syllabus: "power platform.pdf",
+      syllabus: "b1.pdf",
       accentColor: "course-acc2"
     },
     {
@@ -37,7 +37,7 @@ const formatINR = (num) => num.toLocaleString("en-IN");
       image: "images/course/PBSC.png",
       duration: "4 Months",
     discountImage: "images/discount/discount3.png",
-      syllabus: "syllabus-3.pdf",
+      syllabus: "b1.pdf",
       accentColor: "course-acc3"
     }
   ];

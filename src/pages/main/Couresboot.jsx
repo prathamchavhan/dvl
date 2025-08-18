@@ -17,7 +17,7 @@ const navigate = useNavigate();
       image: "images/course/JP.png",
       duration: "6 Months",
     
-      syllabus: "syllabus-1.pdf",
+      syllabus: "b1.pdf",
       accentColor: "course-accent1"
     },
     {
@@ -27,7 +27,7 @@ const navigate = useNavigate();
       image: "images/course/PPC.png",
       duration: "2 Months",
 
-      syllabus: "power platform.pdf",
+      syllabus: "b1.pdf",
       accentColor: "course-accent2"
     },
     {
@@ -37,7 +37,7 @@ const navigate = useNavigate();
       image: "images/course/SC.PNG",
       duration: "4 Months",
     
-      syllabus: "syllabus-3.pdf",
+      syllabus: "b1.pdf",
       accentColor: "course-accent3"
     }
   ];
