@@ -222,7 +222,7 @@ const navigate = useNavigate();
   onClick={() => navigate("/carrercounselling/Councontact")}
 >  ENROLL
 </button>
-                  <img src="discount.png" alt="Price" className="cert-price-img" />
+                
                 </div>
               </div>
           <div className="cert-rating-stack">

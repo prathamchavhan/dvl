@@ -229,7 +229,7 @@ const formatINR = (num) => num.toLocaleString("en-IN");
   onClick={() => navigate("/carrercounselling/Councontact")}
 >  ENROLL
 </button>
-                  <img src={cert.discountImage} alt="Price" className="cert-price-img" />
+                 
 
                 </div>
               </div>
