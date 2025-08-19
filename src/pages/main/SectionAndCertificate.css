@@ -520,8 +520,8 @@ body {
 
 .cert-rating-img {
   width: 160px;
-  height: 190px;
-  object-fit: var(--accent-height);
+  height: 60px;
+  object-fit: cover;
 }
 
 .cert-rating-number {
@@ -629,7 +629,7 @@ body {
     width: 90%;
   }
   .course-buttons {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
   .btn-green,
