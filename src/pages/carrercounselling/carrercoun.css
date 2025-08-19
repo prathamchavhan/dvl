@@ -1,6 +1,6 @@
 .hero-section {
   height: 80vh;
-  background-image: url("/images/aiimage/carrerhero.png"); /* put your uploaded image in public folder */
+  background-image: url("/images/aiimage/carrerhero.png"); /* public folder */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,34 +16,67 @@
   max-width: 500px;
   color: white;
 }
-
 .hero-text h1 {
-  font-size: 2.9rem;
+  font-size: clamp(1.5rem, 5vw, 2.9rem); /* ✅ auto scales with screen */
   font-weight: bold;
   margin-bottom: 20px;
+  line-height: 1.2; /* ✅ avoids overflow */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .subtext {
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 3.5vw, 1.2rem); /* ✅ responsive */
   margin-bottom: 40px;
   color: #000;
+  word-break: break-word;
+  white-space: normal;
 }
 
 .offer {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 4vw, 1.5rem); /* ✅ responsive */
   font-weight: bold;
   color: #000;
+  word-break: break-word;
+  white-space: normal;
 }
 
 .highlight {
   color: #ff4d4d;
   text-decoration: underline;
 }
+
 .career-heading {
-  font-size: 2.5rem;
+  font-size: clamp(1.6rem, 4vw, 2.5rem); /* ✅ responsive */
   font-weight: 700;
   color: #f37021;
   text-align: center;
   margin-bottom: 50px;
+}
 
+/* 📱 Responsive Styling */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 40px 20px;
+    justify-content: flex-start;  
+    text-align: left;
+    margin-bottom: 6rem; /* ✅ reduce big gap */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 30px 15px;
+    justify-content: flex-start;  
+    text-align: left;
+    margin-bottom: 4rem; /* ✅ reduce more on small screens */
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-section {
+    padding: 20px 12px;
+    margin-bottom: 3rem; /* ✅ smallest gap for tiny phones */
+  }
 }
